@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "166261703708",
+    "firebase_url": "https://alarm-4698.firebaseio.com",
+    "project_id": "alarm-4698",
+    "storage_bucket": "alarm-4698.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166261703708:android:5961858ac94bba11d0cbd9",
+        "android_client_info": {
+          "package_name": "com.example.weather"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166261703708-9b9ahrelnssdv57tk0tvi329vm3rvedr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfGJSsbxzLDt7UM0om7xOlIfzvUeicdWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166261703708-9b9ahrelnssdv57tk0tvi329vm3rvedr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
