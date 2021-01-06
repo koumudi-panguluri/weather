@@ -71,8 +71,8 @@ class AlarmState extends State<Alarm> {
   void flutterAlarm() {
     flutterLocalNotificationsPlugin.zonedSchedule(
         0,
-        'Alarm',
-        'How are you? :)',
+        reason,
+        'The alarm from Koumi-App has been set to ${DateTime.fromMillisecondsSinceEpoch(dateTime)}',
         tz.TZDateTime.now(tz.local).add(Duration(milliseconds: timeDiff)),
         const NotificationDetails(
             android: AndroidNotificationDetails('your channel id',
@@ -82,13 +82,13 @@ class AlarmState extends State<Alarm> {
             UILocalNotificationDateInterpretation.absoluteTime);
   }
 
-  void AlarmCancel() {
-    flutterLocalNotificationsPlugin
-        .cancel(widget.cancelAlarmData.key)
-        .then((value) {
-      print("alarm got cancelled");
-    });
-  }
+  // void AlarmCancel() {
+  //   flutterLocalNotificationsPlugin
+  //       .cancel(widget.cancelAlarmData.key)
+  //       .then((value) {
+  //     print("alarm got cancelled");
+  //   });
+  // }
 
   Future<void> scheduleNotificationPost(setTime) async {
     submit();

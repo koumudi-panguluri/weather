@@ -48,28 +48,34 @@ class SetAlarmState extends State<SetAlarm> {
         context: context,
         child: AlertDialog(
           actions: [
-            Column(
-              children: [
-                Text("Are you sure you want to delete?"),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+            Card(
+                margin: EdgeInsets.all(10),
+                child: Column(
                   children: [
-                    FlatButton(
-                        onPressed: () => deleteAlarm(data),
-                        child: Text(
-                          "Delete",
-                          style: TextStyle(color: Colors.red),
+                    Text("Are you sure you want to delete?",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
                         )),
-                    FlatButton(
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                        child: Text("Cancel",
-                            style: TextStyle(color: Colors.green)))
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        FlatButton(
+                            onPressed: () => deleteAlarm(data),
+                            child: Text(
+                              "Delete",
+                              style: TextStyle(color: Colors.red),
+                            )),
+                        FlatButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text("Cancel",
+                                style: TextStyle(color: Colors.green)))
+                      ],
+                    )
                   ],
-                )
-              ],
-            )
+                )),
           ],
         ));
   }
